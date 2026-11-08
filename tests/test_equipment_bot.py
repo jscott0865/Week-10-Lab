@@ -18,11 +18,10 @@ def test_missing_item_asks_for_clarification():
     assistant = make_assistant()
     assert "rental details" in assistant.respond("How much is gear?")
 
+
 def test_reservation_goes_to_human():
     assistant = make_assistant()
-    assert "passing you to a human" in assistant.respond(
-        "I want to reserve a kayak"
-    )
+    assert "passing you to a human" in assistant.respond("I want to reserve a kayak")
 
 
 def test_unknown_request_safe_reply():
